@@ -10,7 +10,12 @@
   </section>
 </template>
 <script>
-export default {}
+import Hamburger from './menu/hamburger.vue'
+export default {
+  components: {
+    Hamburger,
+  },
+}
 </script>
 <style lang="scss">
 @import '~assets/scss/variables';
