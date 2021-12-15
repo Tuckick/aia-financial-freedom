@@ -24,22 +24,22 @@ export default {
           pageName: 'Home',
         },
         {
-          pathTo: '/',
+          pathTo: '/ProductsAndServices',
           iconName: 'hand-holding-heart',
           pageName: 'Products & Services',
         },
         {
-          pathTo: '/',
+          pathTo: '/AboutUs',
           iconName: 'address-card',
           pageName: 'About us',
         },
         {
-          pathTo: '/',
+          pathTo: '/Blog',
           iconName: 'th-large',
           pageName: 'Blog',
         },
         {
-          pathTo: '/',
+          pathTo: '/Contact',
           iconName: 'address-book',
           pageName: 'Contact',
         },
