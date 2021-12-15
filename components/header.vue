@@ -6,7 +6,7 @@
       :src="require('~/assets/logo/financial-freedom-logo.png')"
       to="/"
     />
-    <Hamburger />
+    <Hamburger :topic="pages" />
   </section>
 </template>
 <script>
@@ -14,6 +14,37 @@ import Hamburger from './menu/hamburger.vue'
 export default {
   components: {
     Hamburger,
+  },
+  data() {
+    return {
+      pages: [
+        {
+          pathTo: '/',
+          iconName: 'home',
+          pageName: 'Home',
+        },
+        {
+          pathTo: '/',
+          iconName: 'hand-holding-heart',
+          pageName: 'Products & Services',
+        },
+        {
+          pathTo: '/',
+          iconName: 'address-card',
+          pageName: 'About us',
+        },
+        {
+          pathTo: '/',
+          iconName: 'th-large',
+          pageName: 'Blog',
+        },
+        {
+          pathTo: '/',
+          iconName: 'address-book',
+          pageName: 'Contact',
+        },
+      ],
+    }
   },
 }
 </script>

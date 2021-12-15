@@ -17,53 +17,28 @@
         class="close-icon"
         @click="closeMenu"
       />
-      <ul class="menu-list-container">
-        <nuxt-link to="/"
-          ><li>
-            <font-awesome-icon :icon="['fa', 'home']" @click="closeMenu" />
-            <span>Home</span>
-          </li></nuxt-link
-        >
-        <nuxt-link to="/"
-          ><li>
-            <font-awesome-icon
-              :icon="['fa', 'hand-holding-heart']"
-              @click="closeMenu"
-            />
-            <span>Products & Services</span>
-          </li></nuxt-link
-        >
-        <nuxt-link to="/"
-          ><li>
-            <font-awesome-icon
-              :icon="['fa', 'address-card']"
-              @click="closeMenu"
-            />
-            <span>About us</span>
-          </li></nuxt-link
-        >
-        <nuxt-link to="/"
-          ><li>
-            <font-awesome-icon :icon="['fa', 'th-large']" @click="closeMenu" />
-            <span>Blog</span>
-          </li></nuxt-link
-        >
-        <nuxt-link to="/"
-          ><li>
-            <font-awesome-icon
-              :icon="['fa', 'address-book']"
-              @click="closeMenu"
-            />
-            <span>Contact</span>
-          </li></nuxt-link
-        >
-      </ul>
+      <div class="menu-list-container">
+        <ul v-for="(i, index) in topic" :key="index" class="menu-list-items">
+          <nuxt-link :to="i.pathTo"
+            ><li @click="closeMenu">
+              <font-awesome-icon :icon="['fa', i.iconName]" />
+              <span>{{ i.pageName }}</span>
+            </li></nuxt-link
+          >
+        </ul>
+      </div>
     </div>
   </div>
 </template>
 <script>
 export default {
   name: 'Hamburger',
+  props: {
+    topic: {
+      type: Object,
+      required: true,
+    },
+  },
   data() {
     return {
       isShow: false,
@@ -100,16 +75,19 @@ export default {
       color: $dark-gray;
     }
     .menu-list-container {
-      margin: 0;
-      padding: 64px 0 0 16px;
-      font-size: $regular;
-      list-style-type: none;
-      li {
-        margin: 24px auto;
-      }
-      a {
-        color: $dark-gray;
-        text-decoration: none;
+      margin-top: 64px;
+      .menu-list-items {
+        margin: 0;
+        padding-left: 16px;
+        font-size: $regular;
+        list-style-type: none;
+        li {
+          margin: 24px auto;
+        }
+        a {
+          color: $dark-gray;
+          text-decoration: none;
+        }
       }
     }
   }
