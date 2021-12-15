@@ -6,7 +6,7 @@
 </template>
 <style lang="scss">
 .app-container {
-  margin: 0;
+  margin: -8px;
   padding: 0;
 }
 </style>
