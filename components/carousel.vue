@@ -1,0 +1,57 @@
+<template>
+  <slider class="carousel-container" animation="fade">
+    <slider-item
+      v-for="(i, index) in carouselList"
+      :key="index"
+      class="slide-item"
+      @click="hello"
+    >
+      <img
+        :src="require(`../assets/image/carousel/${i.img}`)"
+        alt="carousel img"
+        class="img-slide-item"
+      />
+    </slider-item>
+  </slider>
+</template>
+<script>
+import { Slider, SliderItem } from 'vue-easy-slider'
+
+export default {
+  name: 'Carousel',
+
+  components: {
+    Slider,
+    SliderItem,
+  },
+  data() {
+    return {
+      carouselList: [
+        { img: 'poster-01.jpg' },
+        { img: 'poster-02.jpg' },
+        { img: 'poster-03.jpg' },
+        { img: 'poster-04.jpg' },
+      ],
+    }
+  },
+  methods: {
+    hello() {
+      console.log('click carousel')
+    },
+  },
+}
+</script>
+
+<style lang="scss" scoped>
+.carousel-container {
+  margin: -20px -20px auto;
+  .slide-item {
+    width: 100%;
+    height: 100%;
+    .img-slide-item {
+      width: inherit;
+      height: inherit;
+    }
+  }
+}
+</style>
