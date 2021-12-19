@@ -4,7 +4,6 @@
       v-for="(i, index) in carouselList"
       :key="index"
       class="slide-item"
-      @click="hello"
     >
       <img
         :src="require(`../assets/image/carousel/${i.img}`)"
@@ -33,11 +32,6 @@ export default {
         { img: 'poster-04.jpg' },
       ],
     }
-  },
-  methods: {
-    hello() {
-      console.log('click carousel')
-    },
   },
 }
 </script>

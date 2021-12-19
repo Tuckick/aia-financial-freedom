@@ -1,5 +1,7 @@
 <template>
-  <section>hello world</section>
+  <section>
+    <Carousel />
+  </section>
 </template>
 
 <script>
