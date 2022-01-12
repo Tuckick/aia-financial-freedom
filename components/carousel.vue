@@ -1,5 +1,5 @@
 <template>
-  <slider class="carousel-container" animation="fade">
+  <slider class="carousel-container" animation="fade" style="height: 500px;">
     <slider-item
       v-for="(i, index) in carouselList"
       :key="index"
