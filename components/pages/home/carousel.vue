@@ -6,7 +6,7 @@
       class="slide-item"
     >
       <img
-        :src="require(`../assets/image/carousel/${i.img}`)"
+        :src="require(`../../../assets/image/carousel/${i.img}`)"
         alt="carousel img"
         class="img-slide-item"
       />
