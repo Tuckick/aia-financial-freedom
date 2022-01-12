@@ -8,16 +8,20 @@
         CFP
       </h1>
     </div>
-    <div class="why-us-section">
+    <div
+      class="topic-at-home-page"
+      v-for="(i, index) in topicList"
+      :key="index"
+    >
       <section class="topic">
         <font-awesome-icon
           :icon="['fa', 'map-marker-alt']"
           size="2x"
           class="topic-icon"
         />
-        <span>Why Us</span>
+        <span>{{ i.name }}</span>
       </section>
-      <WhyUs />
+      <component :is="i.component"></component>
     </div>
   </section>
 </template>
@@ -25,11 +29,21 @@
 <script>
 import Carousel from '../components/pages/home/carousel.vue'
 import WhyUs from '../components/pages/home/whyUs.vue'
+import ProductsAndServices from '../components/pages/home/productNservice.vue'
 
 export default {
   components: {
     Carousel,
     WhyUs,
+    ProductsAndServices,
+  },
+  data() {
+    return {
+      topicList: [
+        { name: 'Why Us', component: 'WhyUs' },
+        { name: 'Products and Services', component: 'ProductsAndServices' },
+      ],
+    }
   },
 }
 </script>
@@ -50,7 +64,7 @@ export default {
     line-height: 1.75;
   }
 }
-.why-us-section {
+.topic-at-home-page {
   align-content: center;
   .topic {
     display: flex;
