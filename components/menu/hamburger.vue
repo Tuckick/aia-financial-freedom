@@ -35,7 +35,7 @@ export default {
   name: 'Hamburger',
   props: {
     topic: {
-      type: Object,
+      type: Array,
       required: true,
     },
   },
