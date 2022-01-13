@@ -1,21 +1,17 @@
 <template>
-    <div class="products-and-services-container">
-        <section class="product-section">
-            
-        productNservice
-        </section>
-    </div>
+  <div class="products-and-services-container">
+    <Card />
+  </div>
 </template>
 <script>
+import Card from '../home/card.vue'
+
 export default {
-    name: 'ProductsAndServices'
+  name: 'ProductsAndServices',
+  components: {
+    Card,
+  },
 }
 </script>
 <style lang="scss" scoped>
-.products-and-services-container {
-    margin: 0 -20px;
-    .product-section{
-        background-color: aquamarine;
-    }
-}
 </style>
