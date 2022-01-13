@@ -9,9 +9,9 @@
       </h1>
     </div>
     <div
-      class="topic-at-home-page"
       v-for="(i, index) in topicList"
       :key="index"
+      class="topic-at-home-page"
     >
       <section class="topic">
         <font-awesome-icon
