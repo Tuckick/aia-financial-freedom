@@ -8,7 +8,9 @@
 .app-container {
   margin: -8px;
   padding: 0;
-  .app-boby-container{
+  text-align: -webkit-center;
+
+  .app-boby-container {
     padding: 20px;
   }
 }

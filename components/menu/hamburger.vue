@@ -58,6 +58,7 @@ export default {
 @import '~assets/scss/variables';
 
 .hamburger-container {
+  text-align: left;
   .hamburger-icon {
     padding-top: 36px;
     padding-right: 20px;
