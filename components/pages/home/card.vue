@@ -52,7 +52,7 @@ export default {
   margin-top: 16px;
   .image-card {
     width: 100%;
-    height: inherit;
+    height: 190px;
   }
   .card-detail {
     h3 {
