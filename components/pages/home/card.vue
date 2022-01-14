@@ -65,4 +65,7 @@ export default {
     }
   }
 }
+.card-container:last-child {
+  margin-bottom: 48px;
+}
 </style>

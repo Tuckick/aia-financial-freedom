@@ -24,7 +24,7 @@ button {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: $small;
+  font-size: $smallest;
   margin: 16px 0px;
   cursor: pointer;
 }
