@@ -30,18 +30,21 @@
 import Carousel from '../components/pages/home/carousel.vue'
 import WhyUs from '../components/pages/home/whyUs.vue'
 import ProductsAndServices from '../components/pages/home/productNservice.vue'
+import EForm from '../components/e-form.vue'
 
 export default {
   components: {
     Carousel,
     WhyUs,
     ProductsAndServices,
+    EForm,
   },
   data() {
     return {
       topicList: [
         { name: 'Why Us', component: 'WhyUs' },
         { name: 'Products and Services', component: 'ProductsAndServices' },
+        { name: 'Start Your Planning', component: 'EForm' },
       ],
     }
   },
