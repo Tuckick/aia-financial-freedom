@@ -1,5 +1,5 @@
 <template>
-  <div class="input-section">
+  <div class="BaseInput">
     <span>{{ title }}</span>
     <Input
       id="full-name"
@@ -35,7 +35,7 @@ export default {
 <style lang="scss" scoped>
 @import '~assets/scss/variables';
 
-.input-section {
+.BaseInput {
   text-align: left;
   color: $dark-gray;
   font-size: $small;
@@ -44,7 +44,7 @@ export default {
   }
   .input-box {
     width: 100%;
-    height: 32px;
+    height: 40px;
     font-size: $small;
     color: $light-gray;
     float: none;

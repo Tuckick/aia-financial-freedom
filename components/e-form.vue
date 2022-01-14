@@ -21,16 +21,31 @@
         :title="contents.email.title"
         :maxlength="contents.email.maxlength"
       />
+      <BaseInput
+        id="email"
+        :title="contents.email.title"
+        :maxlength="contents.email.maxlength"
+      />
+      <BasedDropdown
+        id="productList"
+        :options="listProduct"
+        :validate-click-out-side="true"
+        :title="contents.product.title"
+        :placeholder="contents.product.placeholder"
+      />
     </form>
   </div>
 </template>
 <script>
 import BaseInput from '../components/base-input.vue'
+import BasedDropdown from '../components/base-dropdown.vue'
+
 
 export default {
   name: 'EForm',
   components: {
     BaseInput,
+    BasedDropdown
   },
   data() {
     return {
@@ -51,7 +66,20 @@ export default {
           title: 'E-Mail',
           maxlengthซ: '60',
         },
+        product: {
+          title: 'แผนที่ต้องการ',
+          placeholder: 'เลือกแผนที่ต้องการ',
+        },
       },
+      listProduct: [
+        { value: 'วางแผนประกันภัย', title: 'วางแผนประกันภัย' },
+        { value: 'วางแผนเกษียณอายุ', title: 'วางแผนเกษียณอายุ' },
+        { value: 'วางแผนการศึกษาบุตร', title: 'วางแผนการศึกษาบุตร' },
+        { value: 'วางแผนการลงทุน', title: 'วางแผนการลงทุน' },
+        { value: 'วางแผนภาษี', title: 'วางแผนภาษี' },
+        { value: 'วางแผนมรดก', title: 'วางแผนมรดก' },
+        { value: 'วางแผนอื่นๆ', title: 'วางแผนอื่นๆ' },
+      ],
     }
   },
   // validations: {
@@ -70,6 +98,9 @@ export default {
   //   },
   //   email: {
   //     // emailValidator,
+  //   },
+  // product: {
+  //     required,
   //   },
   // },
 }
