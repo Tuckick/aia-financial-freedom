@@ -33,19 +33,24 @@
         :title="contents.product.title"
         :placeholder="contents.product.placeholder"
       />
+      <BaseDatePicker 
+        id="dealDate"
+        :title="contents.dealDate.title"
+      />
     </form>
   </div>
 </template>
 <script>
 import BaseInput from '../components/base-input.vue'
 import BasedDropdown from '../components/base-dropdown.vue'
-
+import BaseDatePicker from '../components/base-date-picker.vue'
 
 export default {
   name: 'EForm',
   components: {
     BaseInput,
-    BasedDropdown
+    BasedDropdown,
+    BaseDatePicker,
   },
   data() {
     return {
@@ -69,6 +74,9 @@ export default {
         product: {
           title: 'แผนที่ต้องการ',
           placeholder: 'เลือกแผนที่ต้องการ',
+        },
+        dealDate: {
+          title: 'วันที่สะดวกในการติดต่อ',
         },
       },
       listProduct: [

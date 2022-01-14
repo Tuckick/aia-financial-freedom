@@ -1,6 +1,6 @@
 <template>
   <div class="BaseInput">
-    <span>{{ title }}</span>
+    <BaseLabel :title="title" />
     <Input
       id="full-name"
       :type="type"
@@ -10,8 +10,13 @@
   </div>
 </template>
 <script>
+import BaseLabel from '../components/base-label.vue'
+
 export default {
   name: 'BaseInput',
+  components: {
+    BaseLabel,
+  },
   props: {
     id: {
       type: String,

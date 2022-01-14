@@ -2,6 +2,8 @@
   <div class="app-container">
     <Header id="header-section" />
     <Nuxt class="app-boby-container" />
+    <Footer id="footer-section" />
+
   </div>
 </template>
 <style lang="scss">

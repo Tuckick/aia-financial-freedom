@@ -1,6 +1,6 @@
 <template>
   <div class="BasedDropdown">
-    <span>{{ title }}</span>
+    <BaseLabel :title="title" />
     <select
       id="id"
       name="id"
@@ -24,7 +24,13 @@
 </template>
 
 <script>
+import BaseLabel from '../components/base-label.vue'
+
 export default {
+  name: 'BasedDropdown',
+  components: {
+    BaseLabel,
+  },
   props: {
     id: {
       type: String,
