@@ -44,14 +44,16 @@ export default {
 @import '~assets/scss/variables';
 
 .footer-container {
-  width: 100%;
   background-color: $dark-gray;
-
+  text-align: left;
+  padding: 20px;
 }
 .logo-container {
   height: 100px;
 }
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 </style>
