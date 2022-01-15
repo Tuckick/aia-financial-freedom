@@ -1,22 +1,63 @@
 <template>
   <section class="footer-container">
     <div class="contact-address">
-      <h4>ที่อยู่ ติดต่อ</h4>
-      <p>
+      <h4 class="toppic-contact-address">ที่อยู่ ติดต่อ</h4>
+      <p class="contact-address-desc">
         138 ตึก JCB ชั้นที่ 21 แขวงสี่พระยา เขตบางรัก 10500 กรุงเทพมหานคร 10500
       </p>
-      <a href="www.google.com">www.google.com</a><br />
+      <a href="">www.google.com</a><br />
       <a href="tel:055248607">Tel.05-5248607</a>
     </div>
     <div class="follow-social">
-      <h4>Follow</h4>
-      <Devide />
-      <font-awesome-icon :icon="['fa', 'times']" size="2x" />
-      <font-awesome-icon :icon="['fa', 'times']" size="2x" />
-      <font-awesome-icon :icon="['fa', 'times']" size="2x" />
+      <h4 class="toppic-follow-social">Follow</h4>
+      <Devide style-type="gold-divide" />
+      <a href="https://www.facebook.com/financialF245/" target="_blank">
+        <font-awesome-icon
+          class="icon-social"
+          :icon="['fab', 'facebook-square']"
+          size="2x"
+        />
+      </a>
+      <a href="https://www.instagram.com/" target="_blank">
+        <font-awesome-icon
+          class="icon-social"
+          :icon="['fab', 'instagram-square']"
+          size="2x"
+        />
+      </a>
+      <a href="https://twitter.com/" target="_blank">
+        <font-awesome-icon
+          class="icon-social"
+          :icon="['fab', 'twitter-square']"
+          size="2x"
+        />
+      </a>
+
+      <a href="https://www.youtube.com/" target="_blank">
+        <font-awesome-icon
+          class="icon-social"
+          :icon="['fab', 'youtube-square']"
+          size="2x"
+        />
+      </a>
+      <a href="https://www.linkedin.com/" target="_blank">
+        <font-awesome-icon
+          class="icon-social"
+          :icon="['fab', 'linkedin']"
+          size="2x"
+        />
+      </a>
+      <a href="https://line.me/ti/p/evLAiZ5ykv" target="_blank">
+        <font-awesome-icon
+          class="icon-social"
+          :icon="['fab', 'line']"
+          size="2x"
+        />
+      </a>
     </div>
     <div class="our-products">
-      <h4>แผนการเงินที่เราให้บริการ</h4>
+      <h4 class="toppic-our-products">แผนการเงินที่เราให้บริการ</h4>
+      <Devide style-type="gold-divide" />
       <ul>
         <li><a href=""> การวางแผนเกษียณอายุ </a></li>
         <li><a href=""> การวางแผนภาษี </a></li>
@@ -46,14 +87,55 @@ export default {
 .footer-container {
   background-color: $dark-gray;
   text-align: left;
+  font-size: $meduim;
+  color: white;
   padding: 20px;
+
+  .contact-address {
+    .toppic-contact-address {
+      font-size: $super-extra;
+      color: $gold;
+      margin: 32px auto 0;
+      font-weight: 900;
+    }
+    .contact-address-desc {
+      margin: 8px auto 16px;
+      line-height: 1.8;
+    }
+  }
+
+  .follow-social {
+    .toppic-follow-social {
+      font-size: $regular;
+      margin: 32px auto 8px;
+      font-weight: 1000;
+    }
+    .icon-social {
+      margin-top: 16px;
+      margin-right: 8px;
+    }
+  }
+
+  .our-products {
+    .toppic-our-products {
+      font-size: $regular;
+      margin: 32px auto 8px;
+      font-weight: 1000;
+    }
+  }
+  a {
+    color: white;
+    font-size: $meduim;
+    text-decoration: none;
+    line-height: 1.8;
+  }
 }
 .logo-container {
   height: 100px;
 }
 ul {
   list-style: none;
-  margin: 0;
+  margin: 16px 0 0;
   padding: 0;
 }
 </style>
