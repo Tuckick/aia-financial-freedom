@@ -64,19 +64,19 @@ export default {
       contents: {
         fullName: {
           title: 'ชื่อ-นามสกุล',
-          maxlengthซ: '85',
+          maxlength: '85',
         },
         lineId: {
           title: 'Line ID',
-          maxlengthซ: '30',
+          maxlength: '30',
         },
         contactNumber: {
           title: 'เบอร์โทร',
-          maxlengthซ: '10',
+          maxlength: '10',
         },
         email: {
           title: 'E-Mail',
-          maxlengthซ: '60',
+          maxlength: '60',
         },
         product: {
           title: 'แผนที่ต้องการ',
