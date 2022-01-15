@@ -23,7 +23,8 @@
     "nuxt": "^2.15.7",
     "nuxt-fontawesome": "^0.4.0",
     "vue-easy-slider": "^5.3.4",
-    "vuejs-datepicker": "^1.6.2"
+    "vuejs-datepicker": "^1.6.2",
+    "vuelidate": "^0.7.7"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",

@@ -21,7 +21,10 @@ export default {
   css: ['~/assets/scss/_variables.scss', '~layouts/global.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: '~/plugins/vue-datepicker', ssr: false }],
+  plugins: [
+    { src: '~/plugins/vue-datepicker', ssr: false },
+    { src: '~/plugins/vuelidate' },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
