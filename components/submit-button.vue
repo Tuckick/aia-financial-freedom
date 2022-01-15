@@ -1,13 +1,13 @@
 <template>
-  <button>{{text}}</button>
+  <button>{{ text }}</button>
 </template>
 <script>
 export default {
-  name: 'Button',
+  name: 'SubmitButton',
   props: {
     text: {
       type: String,
-      default: 'Okay',
+      default: 'Submit',
       required: false,
     },
   },
@@ -17,6 +17,8 @@ export default {
 @import '~assets/scss/variables';
 
 button {
+  height: 48px;
+  width: 100px;
   background-color: $gold;
   color: white;
   padding: 8px;
@@ -24,7 +26,7 @@ button {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: $smallest;
+  font-size: $small;
   margin: 16px 0px;
   cursor: pointer;
 }

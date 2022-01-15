@@ -33,10 +33,15 @@
         :title="contents.product.title"
         :placeholder="contents.product.placeholder"
       />
-      <BaseDatePicker 
-        id="dealDate"
-        :title="contents.dealDate.title"
+      <BaseDatePicker id="dealDate" :title="contents.dealDate.title" />
+      <BasedDropdown
+        id="timeList"
+        :options="listTime"
+        :validate-click-out-side="true"
+        :title="contents.dealTime.title"
+        :placeholder="contents.dealTime.placeholder"
       />
+      <SubmitButton text="ส่งข้อมูล" />
     </form>
   </div>
 </template>
@@ -44,6 +49,7 @@
 import BaseInput from '../components/base-input.vue'
 import BasedDropdown from '../components/base-dropdown.vue'
 import BaseDatePicker from '../components/base-date-picker.vue'
+import SubmitButton from '../components/submit-button.vue'
 
 export default {
   name: 'EForm',
@@ -51,6 +57,7 @@ export default {
     BaseInput,
     BasedDropdown,
     BaseDatePicker,
+    SubmitButton,
   },
   data() {
     return {
@@ -78,6 +85,10 @@ export default {
         dealDate: {
           title: 'วันที่สะดวกในการติดต่อ',
         },
+        dealTime: {
+          title: 'เวลา',
+          placeholder: 'เลือกเวลาที่สะดวก',
+        },
       },
       listProduct: [
         { value: 'วางแผนประกันภัย', title: 'วางแผนประกันภัย' },
@@ -87,6 +98,13 @@ export default {
         { value: 'วางแผนภาษี', title: 'วางแผนภาษี' },
         { value: 'วางแผนมรดก', title: 'วางแผนมรดก' },
         { value: 'วางแผนอื่นๆ', title: 'วางแผนอื่นๆ' },
+      ],
+      listTime: [
+        { value: 'before9', title: 'ก่อน 9.00 น.' },
+        { value: '10to12', title: 'ระหว่าง 10.00 น. - 12.00 น.' },
+        { value: '12to13', title: 'ระหว่าง 12.00 น. - 13.00 น.' },
+        { value: '13to15', title: 'ระหว่าง 13.00 น. - 15.00 น.' },
+        { value: 'after18', title: 'หลัง 18.00 น.' },
       ],
     }
   },
