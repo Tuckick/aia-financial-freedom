@@ -1,33 +1,34 @@
 <template>
   <div class="e-form-container">
-    <form action="">
+    <form @submit.prevent="submit">
       <BaseInput
         id="fullName"
+        v-model="$v.fullName"
         :title="contents.fullName.title"
         :maxlength="contents.fullName.maxlength"
       />
       <BaseInput
         id="lineId"
+        v-model="$v.lineId"
         :title="contents.lineId.title"
         :maxlength="contents.lineId.maxlength"
       />
       <BaseInput
         id="contactNumber"
+        v-model="$v.contactNumber"
+        type="number"
         :title="contents.contactNumber.title"
         :maxlength="contents.contactNumber.maxlength"
       />
       <BaseInput
         id="email"
-        :title="contents.email.title"
-        :maxlength="contents.email.maxlength"
-      />
-      <BaseInput
-        id="email"
+        v-model="$v.email"
         :title="contents.email.title"
         :maxlength="contents.email.maxlength"
       />
       <BasedDropdown
         id="productList"
+        v-model="$v.productList"
         :options="listProduct"
         :validate-click-out-side="true"
         :title="contents.product.title"
@@ -36,6 +37,7 @@
       <BaseDatePicker id="dealDate" :title="contents.dealDate.title" />
       <BasedDropdown
         id="timeList"
+        v-model="$v.timeList"
         :options="listTime"
         :validate-click-out-side="true"
         :title="contents.dealTime.title"
@@ -43,9 +45,21 @@
       />
       <SubmitButton text="ส่งข้อมูล" />
     </form>
+    <div>
+      <p>{{ fullName }}</p>
+      <p>{{ lineId }}</p>
+      <p>{{ contactNumber }}</p>
+      <p>{{ email }}</p>
+      <p>{{ product }}</p>
+      <p>{{ dealTime }}</p>
+      <p>{{ submitStatus }}</p>
+      <p>{{ $v }}</p>
+
+    </div>
   </div>
 </template>
 <script>
+import { required, maxLength, minLength, email } from 'vuelidate/lib/validators'
 import BaseInput from '../components/base-input.vue'
 import BasedDropdown from '../components/base-dropdown.vue'
 import BaseDatePicker from '../components/base-date-picker.vue'
@@ -61,22 +75,30 @@ export default {
   },
   data() {
     return {
+      fullName: '',
+      lineId: '',
+      contactNumber: '',
+      email: '',
+      product: '',
+      dealDate: '',
+      dealTime: '',
+      submitStatus: null,
       contents: {
         fullName: {
           title: 'ชื่อ-นามสกุล',
-          maxlength: '85',
+          maxlength: 85,
         },
         lineId: {
           title: 'Line ID',
-          maxlength: '30',
+          maxlength: 30,
         },
         contactNumber: {
           title: 'เบอร์โทร',
-          maxlength: '10',
+          maxlength: 10,
         },
         email: {
           title: 'E-Mail',
-          maxlength: '60',
+          maxlength: 60,
         },
         product: {
           title: 'แผนที่ต้องการ',
@@ -108,27 +130,40 @@ export default {
       ],
     }
   },
-  // validations: {
-  //   fullName: {
-  //     required,
-  //     maxLength: maxLength(85),
-  //   },
-  //   lineId: {
-  //     maxLength: maxLength(30),
-  //   },
-  //   contactNumber: {
-  //     required,
-  //     maxLength: maxLength(10),
-  //     minLength: minLength(10),
-  //     // phoneValidator,
-  //   },
-  //   email: {
-  //     // emailValidator,
-  //   },
-  // product: {
-  //     required,
-  //   },
-  // },
+  validations: {
+    fullName: {
+      required,
+      maxLength: maxLength(85),
+    },
+    lineId: {
+      maxLength: maxLength(30),
+    },
+    contactNumber: {
+      required,
+      maxLength: maxLength(10),
+      minLength: minLength(10),
+    },
+    email: {
+      email,
+    },
+    product: {
+      required,
+    },
+  },
+  methods: {
+    submit() {
+      this.$v.$touch()
+      if (this.$v.$invalid) {
+        this.submitStatus = 'ERROR'
+      } else {
+        // do your submit logic here
+        this.submitStatus = 'PENDING'
+        setTimeout(() => {
+          this.submitStatus = 'OK'
+        }, 500)
+      }
+    },
+  },
 }
 </script>
 <style lang="scss" scoped>

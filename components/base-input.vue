@@ -28,7 +28,8 @@ export default {
     },
     type: {
       type: String,
-      required: true,
+      required: false,
+      default: 'text',
     },
     maxlength: {
       type: Number,
