@@ -29,6 +29,32 @@
         </ul>
         <Devide />
       </div>
+      <div class="how-i-help">
+        <strong>เราช่วยคุณได้อย่างไร?</strong>
+        <div
+          v-for="(item, index) in productsData"
+          :id="item.id"
+          ref="item"
+          :key="index"
+          :active="activeIndex === index"
+          class="accordion-container"
+        >
+          <div class="title-accordion-container" @click="togleButton">
+            <span>{{ item.title }}</span>
+            <img
+              src="../assets/icons/accordion/icon-arrow-down.svg"
+              alt="icon arrow down"
+              class="icon-arrow-down"
+              :class="{ isActive }"
+            />
+          </div>
+          <div class="detail-accordion-container" :class="{ isActive }">
+            <p>
+              {{ item.content }}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -36,6 +62,7 @@
 <script>
 import PageTitle from '../components/page-title.vue'
 import Devide from '../components/devide.vue'
+import ProductsData from '../content/productAndServicesData.json'
 
 export default {
   name: 'ProductsAndServices',
@@ -64,7 +91,22 @@ export default {
           ],
         },
       },
+      defaultIndex: null,
+      activeIndex: this.defaultIndex,
+      isActive: this.active || false,
+      productsData: ProductsData,
     }
+  },
+  mounted() {
+    this.toggle(0)
+  },
+  methods: {
+    togleButton() {
+      this.isActive = !this.isActive
+    },
+    toggle(newIndex) {
+      this.activeIndex = newIndex
+    },
   },
 }
 </script>
@@ -93,6 +135,44 @@ export default {
         }
         li:first-child {
           margin-top: 16px;
+        }
+      }
+    }
+    .how-i-help {
+      margin: 24px 0;
+
+      strong {
+        color: $gray-desc;
+        font-size: $extra;
+        font-weight: 1000;
+      }
+
+      .accordion-container {
+        width: 100%;
+        margin: 24px 0;
+        background-color: chartreuse;
+
+        .title-accordion-container {
+          display: flex;
+          justify-content: space-between;
+          background-color: aquamarine;
+          padding: 16px;
+
+          .icon-arrow-down {
+            vertical-align: middle;
+            transition: transform 0.2s ease-out;
+            &.isActive {
+              transform: rotate(180deg);
+            }
+          }
+        }
+
+        .detail-accordion-container {
+          background-color: cadetblue;
+          padding: 16px;
+          &.isActive {
+            display: none;
+          }
         }
       }
     }
