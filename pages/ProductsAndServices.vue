@@ -31,28 +31,30 @@
       </div>
       <div class="how-i-help">
         <strong>เราช่วยคุณได้อย่างไร?</strong>
+        <Accordion class="accordion-container" :items="productsData" />
+      </div>
+      <div class="service-process-container">
+        <strong>เราช่วยคุณได้อย่างไร?</strong>
+        <p>
+          การให้บริการจะมีการนัดพบ 1 – 2 ครั้ง แต่ละครั้งใช้เวลาประมาณ 1 – 2
+          ชั่วโมง โดยแบ่งเป็น 6 ขั้นตอนดังนี้
+        </p>
         <div
-          v-for="(item, index) in productsData"
-          :id="item.id"
-          ref="item"
+          v-for="(i, index) in serviceProcessItem"
           :key="index"
-          :active="activeIndex === index"
-          class="accordion-container"
+          class="service-process-section"
         >
-          <div class="title-accordion-container" @click="togleButton">
-            <span>{{ item.title }}</span>
-            <img
-              src="../assets/icons/accordion/icon-arrow-down.svg"
-              alt="icon arrow down"
-              class="icon-arrow-down"
-              :class="{ isActive }"
-            />
+          <div class="detail-service-process-section">
+            <div class="number-service-process-section">
+              <span>{{ i.number }}</span>
+            </div>
+            <div class="toppic-service-process-section">
+              <span>{{ i.toppic }}</span
+              ><br />
+              <p>{{ i.desc }}</p>
+            </div>
           </div>
-          <div class="detail-accordion-container" :class="{ isActive }">
-            <p>
-              {{ item.content }}
-            </p>
-          </div>
+          <div class="line-process-section" />
         </div>
       </div>
     </div>
@@ -62,6 +64,7 @@
 <script>
 import PageTitle from '../components/page-title.vue'
 import Devide from '../components/devide.vue'
+import Accordion from '../components/accordion/Accordion.vue'
 import ProductsData from '../content/productAndServicesData.json'
 
 export default {
@@ -69,6 +72,7 @@ export default {
   components: {
     PageTitle,
     Devide,
+    Accordion,
   },
   data() {
     return {
@@ -95,6 +99,38 @@ export default {
       activeIndex: this.defaultIndex,
       isActive: this.active || false,
       productsData: ProductsData,
+      serviceProcessItem: [
+        {
+          number: '1',
+          toppic: 'แนะนำบริการ',
+          desc: 'แนะนำตัวพูดคุยเพื่อสร้างความเข้าใจที่ตรงกัน',
+        },
+        {
+          number: '2',
+          toppic: 'เก็บข้อมูล',
+          desc: 'เก็บข้อมูลที่สำคัญและกำหนดเป้าหมาย',
+        },
+        {
+          number: '3',
+          toppic: 'วิเคราะห์',
+          desc: 'วิเคราะห์ข้อมูลเพื่อกำหนดแผนปฏิบัติตามเป้าหมาย',
+        },
+        {
+          number: '4',
+          toppic: 'นำเสนอแผน',
+          desc: 'อธิบายผลวิเคราะห์และนำเสนอแผนปฏิบัติ',
+        },
+        {
+          number: '5',
+          toppic: 'ลงมือปฏิบัติ',
+          desc: 'เริ่มต้นลงมือปฏิบัติตามแผนที่นำเสนอ',
+        },
+        {
+          number: '6',
+          toppic: 'อัพเดทสถานะปัจจุบัน',
+          desc: 'ทบทวนและปรับแผนตามสถานการณ์อย่างน้อยปีละ 1 ครั้ง',
+        },
+      ],
     }
   },
   mounted() {
@@ -150,29 +186,57 @@ export default {
       .accordion-container {
         width: 100%;
         margin: 24px 0;
-        background-color: chartreuse;
+      }
+    }
+    .service-process-container {
+      position: relative;
+      margin: 24px 0;
 
-        .title-accordion-container {
+      strong {
+        color: $gray-desc;
+        font-size: $extra;
+        font-weight: 1000;
+      }
+      .service-process-section {
+        position: relative;
+
+        .detail-service-process-section {
           display: flex;
-          justify-content: space-between;
-          background-color: aquamarine;
-          padding: 16px;
+          .number-service-process-section {
+            width: 36px;
+            height: 36px;
+            color: white;
+            background-color: $gold;
+            border: 1px solid $gold;
+            border-radius: 50%;
 
-          .icon-arrow-down {
-            vertical-align: middle;
-            transition: transform 0.2s ease-out;
-            &.isActive {
-              transform: rotate(180deg);
+            span {
+              margin: 13px;
+              vertical-align: -webkit-baseline-middle;
+            }
+          }
+          .toppic-service-process-section {
+            color: $gray-desc;
+            margin-left: 16px;
+            margin-bottom: 16px;
+            span {
+              vertical-align: -webkit-baseline-middle;
+            }
+            p {
+              margin: 4px 0;
+              font-size: $smallest;
             }
           }
         }
 
-        .detail-accordion-container {
-          background-color: cadetblue;
-          padding: 16px;
-          &.isActive {
-            display: none;
-          }
+        .line-process-section {
+          position: absolute;
+          top: 36px;
+          left: 16px;
+          height: 56px;
+          width: 1px;
+          background-color: $gold;
+          border: 2px solid $gold;
         }
       }
     }
