@@ -33,11 +33,11 @@ export default {
           iconName: 'address-card',
           pageName: 'About us',
         },
-        {
-          pathTo: '/Blog',
-          iconName: 'th-large',
-          pageName: 'Blog',
-        },
+        // {
+        //   pathTo: '/Blog',
+        //   iconName: 'th-large',
+        //   pageName: 'Blog',
+        // },
         {
           pathTo: '/Contact',
           iconName: 'address-book',
