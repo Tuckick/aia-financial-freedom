@@ -9,6 +9,11 @@
       :ga-tag-id="item.id"
     >
       <template #content>
+        <img
+          :src="require(`~/assets/image/productsNservices/${item.img}.jpg`)"
+          :alt="item.title"
+          class="accordion-item-img"
+        />
         <!-- eslint-disable vue/no-v-html -->
         <AccordionContentTextBody v-html="item.content" />
         <!--eslint-enable-->
@@ -77,5 +82,10 @@ export default {
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: max-content;
+
+  .accordion-item-img {
+    height: 150px;
+    width: 100%;
+  }
 }
 </style>

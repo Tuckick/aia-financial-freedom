@@ -3,6 +3,12 @@
     src: local("Sukhumvit"),
      url(~assets/Sukhumvit/Sukhumvit-Set.ttf) format("truetype");
 }
+/* 
+@font-face {
+    font-family: "Sukhumvit";
+    src: local("Sukhumvit"),
+     url(~assets/Sukhumvit/sukhumvit-set-bold.ttf) format("truetype");
+} */
 
 html {
     font-family: "Sukhumvit";

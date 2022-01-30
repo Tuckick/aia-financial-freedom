@@ -45,7 +45,7 @@
           class="service-process-section"
         >
           <div class="detail-service-process-section">
-            <div class="number-service-process-section">
+            <div class="icon-service-process-section">
               <font-awesome-icon
                 :icon="['fa', i.icon]"
                 size="2x"
@@ -110,12 +110,12 @@ export default {
           desc: 'แนะนำตัวพูดคุยเพื่อสร้างความเข้าใจที่ตรงกัน',
         },
         {
-          icon: 'pencil-alt',
+          icon: 'file-signature',
           toppic: 'เก็บข้อมูล',
           desc: 'เก็บข้อมูลที่สำคัญและกำหนดเป้าหมาย',
         },
         {
-          icon: 'book-reader',
+          icon: 'search',
           toppic: 'วิเคราะห์',
           desc: 'วิเคราะห์ข้อมูลเพื่อกำหนดแผนปฏิบัติตามเป้าหมาย',
         },
@@ -125,7 +125,7 @@ export default {
           desc: 'อธิบายผลวิเคราะห์และนำเสนอแผนปฏิบัติ',
         },
         {
-          icon: 'handshake',
+          icon: 'users-cog',
           toppic: 'ลงมือปฏิบัติ',
           desc: 'เริ่มต้นลงมือปฏิบัติตามแผนที่นำเสนอ',
         },
@@ -194,7 +194,7 @@ export default {
     }
     .service-process-container {
       position: relative;
-      margin: 24px 0;
+      margin: 24px 0 0;
 
       strong {
         color: $gray-desc;
@@ -206,7 +206,7 @@ export default {
 
         .detail-service-process-section {
           display: flex;
-          .number-service-process-section {
+          .icon-service-process-section {
             width: 56px;
             height: 56px;
             color: white;
@@ -217,12 +217,13 @@ export default {
             .icon-section {
               margin: 10px;
               vertical-align: -webkit-baseline-middle;
+              padding-top: 1px;
             }
           }
           .toppic-service-process-section {
             color: $gray-desc;
             margin-left: 16px;
-            margin-bottom: 32px;
+            margin-bottom: 28px;
             span {
               vertical-align: -webkit-baseline-middle;
             }
