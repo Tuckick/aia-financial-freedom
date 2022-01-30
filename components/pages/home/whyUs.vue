@@ -1,42 +1,20 @@
 <template>
   <div class="why-us-container">
-    <div v-for="(i, index) in contents" :key="index">
-      <section class="icon-section">
-        <font-awesome-icon :icon="['fa', i.icon]" size="3x" class="icon" />
-      </section>
-      <section class="topic-section">
-        <span>{{ i.title }}</span>
-      </section>
-      <section class="desc-section">
-        <span>
-          {{ i.desc }}
-        </span>
-      </section>
-    </div>
+    <UnborderCard :items="contents" />
   </div>
 </template>
 <script>
+import UnborderCard from '../../unborder-card.vue'
+import WhyUsData from '../../../content/whyUs.json'
+
 export default {
   name: 'WhyUs',
+  components: {
+    UnborderCard,
+  },
   data() {
     return {
-      contents: [
-        {
-          icon: 'user-alt',
-          title: 'Expertise',
-          desc: 'ด้วยทีมงานมากประสบการณ์ คุณจึงมั่นใจได้ว่าแผนการเงินของคุณได้รับการดูแลอย่างมืออาชีพและเป็นระบบ',
-        },
-        {
-          icon: 'wrench',
-          title: 'Personalize',
-          desc: 'เพราะเป้าหมายของแต่ละคนไม่เหมือนกัน แผนการเงินจึงถูกออกแบบให้มีความเหมาะสมในแต่ละบุคคล',
-        },
-        {
-          icon: 'shield-alt',
-          title: 'Reliable',
-          desc: 'ความไว้วางใจคือสิ่งที่เราให้ความสำคัญ เรายืนหยัดในการแนะนำสิ่งที่ดีสุดเพื่อประโยชน์ของคุณ',
-        },
-      ],
+      contents: WhyUsData,
     }
   },
 }
