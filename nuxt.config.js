@@ -55,6 +55,23 @@ export default {
         ],
       },
     ],
+    [
+      '@nuxtjs/firebase',
+      {
+        config: {
+          apiKey: 'AIzaSyAQEFLivMXU0B79Jmr61SSLtXe_eogy4ug',
+          authDomain: 'financial-freedom-d924c.firebaseapp.com',
+          projectId: 'financial-freedom-d924c',
+          storageBucket: 'financial-freedom-d924c.appspot.com',
+          messagingSenderId: '515580932304',
+          appId: '1:515580932304:web:58a0f70d3ba3684339aed5',
+          measurementId: 'G-0R1L9B142H',
+        },
+        services: {
+          auth: true,
+        },
+      },
+    ],
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
