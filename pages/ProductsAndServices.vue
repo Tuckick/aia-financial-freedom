@@ -46,7 +46,11 @@
         >
           <div class="detail-service-process-section">
             <div class="number-service-process-section">
-              <span>{{ i.number }}</span>
+              <font-awesome-icon
+                :icon="['fa', i.icon]"
+                size="2x"
+                class="icon-section"
+              />
             </div>
             <div class="toppic-service-process-section">
               <span>{{ i.toppic }}</span
@@ -101,32 +105,32 @@ export default {
       productsData: ProductsData,
       serviceProcessItem: [
         {
-          number: '1',
+          icon: 'comments',
           toppic: 'แนะนำบริการ',
           desc: 'แนะนำตัวพูดคุยเพื่อสร้างความเข้าใจที่ตรงกัน',
         },
         {
-          number: '2',
+          icon: 'pencil-alt',
           toppic: 'เก็บข้อมูล',
           desc: 'เก็บข้อมูลที่สำคัญและกำหนดเป้าหมาย',
         },
         {
-          number: '3',
+          icon: 'book-reader',
           toppic: 'วิเคราะห์',
           desc: 'วิเคราะห์ข้อมูลเพื่อกำหนดแผนปฏิบัติตามเป้าหมาย',
         },
         {
-          number: '4',
+          icon: 'chart-bar',
           toppic: 'นำเสนอแผน',
           desc: 'อธิบายผลวิเคราะห์และนำเสนอแผนปฏิบัติ',
         },
         {
-          number: '5',
+          icon: 'handshake',
           toppic: 'ลงมือปฏิบัติ',
           desc: 'เริ่มต้นลงมือปฏิบัติตามแผนที่นำเสนอ',
         },
         {
-          number: '6',
+          icon: 'sync-alt',
           toppic: 'อัพเดทสถานะปัจจุบัน',
           desc: 'ทบทวนและปรับแผนตามสถานการณ์อย่างน้อยปีละ 1 ครั้ง',
         },
@@ -203,22 +207,22 @@ export default {
         .detail-service-process-section {
           display: flex;
           .number-service-process-section {
-            width: 36px;
-            height: 36px;
+            width: 56px;
+            height: 56px;
             color: white;
             background-color: $gold;
             border: 1px solid $gold;
             border-radius: 50%;
 
-            span {
-              margin: 13px;
+            .icon-section {
+              margin: 10px;
               vertical-align: -webkit-baseline-middle;
             }
           }
           .toppic-service-process-section {
             color: $gray-desc;
             margin-left: 16px;
-            margin-bottom: 16px;
+            margin-bottom: 32px;
             span {
               vertical-align: -webkit-baseline-middle;
             }
@@ -231,12 +235,17 @@ export default {
 
         .line-process-section {
           position: absolute;
-          top: 36px;
-          left: 16px;
+          top: 56px;
+          left: 26px;
           height: 56px;
           width: 1px;
           background-color: $gold;
           border: 2px solid $gold;
+        }
+      }
+      .service-process-section:last-child {
+        .line-process-section {
+          display: none;
         }
       }
     }
