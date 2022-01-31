@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="home-container">
     <Carousel />
     <div class="may-i-help-container">
       <h1>
@@ -51,31 +51,35 @@ export default {
 <style lang="scss" scoped>
 @import '~assets/scss/variables';
 
-.may-i-help-container {
-  background-color: $dark-gray;
-  text-align: center;
-  padding: 30px 20px;
-  margin: 0 -20px;
+.home-container {
+  max-width: 540px;
 
-  h1 {
-    color: $white;
-    font-size: $regular;
-    font-weight: 1000;
-    line-height: 1.75;
-  }
-}
-.topic-at-home-page {
-  align-content: center;
-  .topic {
-    display: flex;
-    margin: 20px auto;
-    .topic-icon {
-      color: $gold;
-      margin-right: 8px;
-    }
-    span {
-      font-size: $extra;
+  .may-i-help-container {
+    background-color: $dark-gray;
+    text-align: center;
+    padding: 30px 20px;
+    margin: 0 -20px;
+
+    h1 {
+      color: $white;
+      font-size: $regular;
       font-weight: 1000;
+      line-height: 1.75;
+    }
+  }
+  .topic-at-home-page {
+    align-content: center;
+    .topic {
+      display: flex;
+      margin: 20px auto;
+      .topic-icon {
+        color: $gold;
+        margin-right: 8px;
+      }
+      span {
+        font-size: $extra;
+        font-weight: 1000;
+      }
     }
   }
 }

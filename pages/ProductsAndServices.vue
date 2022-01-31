@@ -155,6 +155,7 @@ export default {
 @import '~assets/scss/variables';
 
 .products-and-services-container {
+  max-width: 540px;
   padding: 0;
 
   .products-and-services-container-body {

@@ -78,6 +78,7 @@ export default {
 
 .about-us-container {
   padding: 0;
+  max-width: 540px;
   .about-us-container-body {
     padding: 40px 20px;
 
