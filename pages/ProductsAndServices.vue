@@ -35,7 +35,7 @@
           <Accordion class="accordion-container" :items="productsData" />
         </div>
         <div class="service-process-container">
-          <strong>เราช่วยคุณได้อย่างไร?</strong>
+          <strong>ขั้นตอนการให้บริการ</strong>
           <p>
             การให้บริการจะมีการนัดพบ 1 – 2 ครั้ง แต่ละครั้งใช้เวลาประมาณ 1 – 2
             ชั่วโมง โดยแบ่งเป็น 6 ขั้นตอนดังนี้
@@ -182,7 +182,7 @@ export default {
       }
     }
     .how-i-help {
-      margin: 24px 0;
+      margin: 40px 0;
 
       strong {
         color: $gray-desc;
