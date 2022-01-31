@@ -59,13 +59,13 @@ export default {
       '@nuxtjs/firebase',
       {
         config: {
-          apiKey: 'AIzaSyAQEFLivMXU0B79Jmr61SSLtXe_eogy4ug',
-          authDomain: 'financial-freedom-d924c.firebaseapp.com',
-          projectId: 'financial-freedom-d924c',
-          storageBucket: 'financial-freedom-d924c.appspot.com',
-          messagingSenderId: '515580932304',
-          appId: '1:515580932304:web:58a0f70d3ba3684339aed5',
-          measurementId: 'G-0R1L9B142H',
+          apiKey: 'AIzaSyC6EpLlOb7EEDrHl_oUUSOLGFni5LPTohM',
+          authDomain: 'financial-freedom-64c9a.firebaseapp.com',
+          projectId: 'financial-freedom-64c9a',
+          storageBucket: 'financial-freedom-64c9a.appspot.com',
+          messagingSenderId: '689561205579',
+          appId: '1:689561205579:web:577fcacac43182fae3c6ce',
+          measurementId: 'G-H0JKTGC4J9',
         },
         services: {
           auth: true,

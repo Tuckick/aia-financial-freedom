@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "financial-freedom-64c9a",
+    "financial-freedom": "financial-freedom-64c9a"
+  },
+  "targets": {}
+}
