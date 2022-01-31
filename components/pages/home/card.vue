@@ -2,7 +2,7 @@
   <div>
     <div v-for="(item, index) in items" :key="index" class="card-container">
       <img
-        :src="require(`~/assets/image/productsNservices/${item.img}.jpg`)"
+        :src="require(`~/assets/image/productsNservices/${item.name}.jpg`)"
         alt="item.thTitle"
         class="image-card"
       />
@@ -12,7 +12,7 @@
         <p>{{ item.desc }}</p>
       </div>
       <Devide />
-      <Button :text="btnText" />
+        <Button :text="btnText" />
     </div>
   </div>
 </template>
