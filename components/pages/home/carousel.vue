@@ -39,7 +39,7 @@ export default {
 <style lang="scss" scoped>
 .carousel-container {
   z-index: 0;
-  margin: -20px -20px auto;
+
   .slide-item {
     width: 100%;
     height: 100%;

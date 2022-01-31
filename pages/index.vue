@@ -1,6 +1,6 @@
 <template>
-  <section class="home-container">
-    <Carousel />
+  <div>
+    <Carousel id="home-carousel" />
     <div class="may-i-help-container">
       <h1>
         เราให้บริการสร้างสรรค์ และออกแบบแผนการเงินที่ตอบโจทย์
@@ -8,22 +8,24 @@
         CFP
       </h1>
     </div>
-    <div
-      v-for="(i, index) in topicList"
-      :key="index"
-      class="topic-at-home-page"
-    >
-      <section class="topic">
-        <font-awesome-icon
-          :icon="['fa', 'map-marker-alt']"
-          size="2x"
-          class="topic-icon"
-        />
-        <span>{{ i.name }}</span>
-      </section>
-      <component :is="i.component"></component>
-    </div>
-  </section>
+    <section class="home-container">
+      <div
+        v-for="(i, index) in topicList"
+        :key="index"
+        class="topic-at-home-page"
+      >
+        <section class="topic">
+          <font-awesome-icon
+            :icon="['fa', 'map-marker-alt']"
+            size="2x"
+            class="topic-icon"
+          />
+          <span>{{ i.name }}</span>
+        </section>
+        <component :is="i.component"></component>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -51,24 +53,28 @@ export default {
 <style lang="scss" scoped>
 @import '~assets/scss/variables';
 
+#home-carousel {
+  width: 100vw;
+}
+.may-i-help-container {
+  background-color: $dark-gray;
+  text-align: center;
+  padding: 30px 20px;
+
+  h1 {
+    color: $white;
+    font-size: $regular;
+    font-weight: 1000;
+    line-height: 1.75;
+  }
+}
 .home-container {
   max-width: 540px;
+  padding: 20px 20px 0;
 
-  .may-i-help-container {
-    background-color: $dark-gray;
-    text-align: center;
-    padding: 30px 20px;
-    margin: 0 -20px;
-
-    h1 {
-      color: $white;
-      font-size: $regular;
-      font-weight: 1000;
-      line-height: 1.75;
-    }
-  }
   .topic-at-home-page {
     align-content: center;
+
     .topic {
       display: flex;
       margin: 20px auto;

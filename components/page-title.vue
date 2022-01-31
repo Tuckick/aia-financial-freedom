@@ -18,7 +18,7 @@ export default {
 @import '~assets/scss/variables';
 
 .page-title-section {
-  width: 100%;
+  width: 100vw;
   background-color: $smoke-gray;
   padding: 0;
   text-align: left;

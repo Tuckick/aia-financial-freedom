@@ -1,64 +1,66 @@
 <template>
-  <div class="products-and-services-container">
+  <div>
     <PageTitle text="Products & Services" />
-    <div class="products-and-services-container-body">
-      <div class="explanded-list">
-        <ul class="for-who">
-          บริการนี้เหมาะกับใคร ?
-          <li>คนที่ต้องการเริ่มต้นวางแผนชีวิตอย่างถูกต้อง</li>
-          <li>ไม่จำกัดอายุ ระดับการศึกษา</li>
-          <li>ไม่จำกัดเงินเรื่องรายได้ หรือเงินเริ่มต้นลงทุน</li>
-          <li>ยินดีเปิดเผยข้อมูลการเงินส่วนตัวได้</li>
-        </ul>
-        <ul class="how-much">
-          คิดค่าบริการอย่างไร ?
-          <li>
-            ค่าที่ปรึกษาครั้งแรก: <strong style="color: red">ไม่มี</strong>
-          </li>
-          <li>
-            ค่าใช้จ่ายในการวางแผน:
-            <strong style="color: rgb(50, 50, 50)"
-              >ขึ้นอยู่กับความยากง่ายของแผนการเงิน</strong
-            >
-            (ค่าบริการจะแจ้งก่อนเริ่มวางแผนจริง)
-          </li>
-          <li>
-            ท่านไม่มีข้อผูกมัดในการรับบริการจากเรา
-            การตัดสินใจของท่านขึ้นอยู่กับความพึงพอใจในคำแนะนำเบื้องต้นของเรา
-          </li>
-        </ul>
-        <Devide />
-      </div>
-      <div class="how-i-help">
-        <strong>เราช่วยคุณได้อย่างไร?</strong>
-        <Accordion class="accordion-container" :items="productsData" />
-      </div>
-      <div class="service-process-container">
-        <strong>เราช่วยคุณได้อย่างไร?</strong>
-        <p>
-          การให้บริการจะมีการนัดพบ 1 – 2 ครั้ง แต่ละครั้งใช้เวลาประมาณ 1 – 2
-          ชั่วโมง โดยแบ่งเป็น 6 ขั้นตอนดังนี้
-        </p>
-        <div
-          v-for="(i, index) in serviceProcessItem"
-          :key="index"
-          class="service-process-section"
-        >
-          <div class="detail-service-process-section">
-            <div class="icon-service-process-section">
-              <font-awesome-icon
-                :icon="['fa', i.icon]"
-                size="2x"
-                class="icon-section"
-              />
+    <div class="products-and-services-container">
+      <div class="products-and-services-container-body">
+        <div class="explanded-list">
+          <ul class="for-who">
+            บริการนี้เหมาะกับใคร ?
+            <li>คนที่ต้องการเริ่มต้นวางแผนชีวิตอย่างถูกต้อง</li>
+            <li>ไม่จำกัดอายุ ระดับการศึกษา</li>
+            <li>ไม่จำกัดเงินเรื่องรายได้ หรือเงินเริ่มต้นลงทุน</li>
+            <li>ยินดีเปิดเผยข้อมูลการเงินส่วนตัวได้</li>
+          </ul>
+          <ul class="how-much">
+            คิดค่าบริการอย่างไร ?
+            <li>
+              ค่าที่ปรึกษาครั้งแรก: <strong style="color: red">ไม่มี</strong>
+            </li>
+            <li>
+              ค่าใช้จ่ายในการวางแผน:
+              <strong style="color: rgb(50, 50, 50)"
+                >ขึ้นอยู่กับความยากง่ายของแผนการเงิน</strong
+              >
+              (ค่าบริการจะแจ้งก่อนเริ่มวางแผนจริง)
+            </li>
+            <li>
+              ท่านไม่มีข้อผูกมัดในการรับบริการจากเรา
+              การตัดสินใจของท่านขึ้นอยู่กับความพึงพอใจในคำแนะนำเบื้องต้นของเรา
+            </li>
+          </ul>
+          <Devide />
+        </div>
+        <div class="how-i-help">
+          <strong>เราช่วยคุณได้อย่างไร?</strong>
+          <Accordion class="accordion-container" :items="productsData" />
+        </div>
+        <div class="service-process-container">
+          <strong>เราช่วยคุณได้อย่างไร?</strong>
+          <p>
+            การให้บริการจะมีการนัดพบ 1 – 2 ครั้ง แต่ละครั้งใช้เวลาประมาณ 1 – 2
+            ชั่วโมง โดยแบ่งเป็น 6 ขั้นตอนดังนี้
+          </p>
+          <div
+            v-for="(i, index) in serviceProcessItem"
+            :key="index"
+            class="service-process-section"
+          >
+            <div class="detail-service-process-section">
+              <div class="icon-service-process-section">
+                <font-awesome-icon
+                  :icon="['fa', i.icon]"
+                  size="2x"
+                  class="icon-section"
+                />
+              </div>
+              <div class="toppic-service-process-section">
+                <span>{{ i.toppic }}</span
+                ><br />
+                <p>{{ i.desc }}</p>
+              </div>
             </div>
-            <div class="toppic-service-process-section">
-              <span>{{ i.toppic }}</span
-              ><br />
-              <p>{{ i.desc }}</p>
-            </div>
+            <div class="line-process-section" />
           </div>
-          <div class="line-process-section" />
         </div>
       </div>
     </div>
