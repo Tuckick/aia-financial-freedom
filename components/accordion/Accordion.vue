@@ -63,9 +63,6 @@ export default {
       return this.items.filter(this.isAvailable).slice(0, limitIdx)
     },
   },
-  mounted() {
-    this.toggle(0)
-  },
   methods: {
     isAvailable(item) {
       return item.visible

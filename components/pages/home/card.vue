@@ -12,7 +12,14 @@
         <p>{{ item.desc }}</p>
       </div>
       <Devide />
+      <nuxt-link
+        :to="{
+          path: '/ProductsAndServices',
+          hash: item.name,
+        }"
+      >
         <Button :text="btnText" />
+      </nuxt-link>
     </div>
   </div>
 </template>
