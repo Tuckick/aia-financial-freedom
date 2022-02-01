@@ -3,10 +3,10 @@
     <div class="contact-address">
       <h4 class="toppic-contact-address">ที่อยู่ ติดต่อ</h4>
       <p class="contact-address-desc">
-        138 ตึก JCB ชั้นที่ 21 แขวงสี่พระยา เขตบางรัก 10500 กรุงเทพมหานคร 10500
+        1234 ตึก AIA แขวงXXX เขตXXX กรุงเทพมหานคร 100000
       </p>
       <a href="">www.google.com</a><br />
-      <a href="tel:055248607">Tel.05-5248607</a>
+      <a href="tel:055248607">Tel.02-XXXXXXX</a>
     </div>
     <div class="follow-social">
       <h4 class="toppic-follow-social">Follow</h4>
@@ -18,36 +18,8 @@
           size="2x"
         />
       </a>
-      <a href="https://www.instagram.com/" target="_blank">
-        <font-awesome-icon
-          class="icon-social"
-          :icon="['fab', 'instagram-square']"
-          size="2x"
-        />
-      </a>
-      <a href="https://twitter.com/" target="_blank">
-        <font-awesome-icon
-          class="icon-social"
-          :icon="['fab', 'twitter-square']"
-          size="2x"
-        />
-      </a>
 
-      <a href="https://www.youtube.com/" target="_blank">
-        <font-awesome-icon
-          class="icon-social"
-          :icon="['fab', 'youtube-square']"
-          size="2x"
-        />
-      </a>
-      <a href="https://www.linkedin.com/" target="_blank">
-        <font-awesome-icon
-          class="icon-social"
-          :icon="['fab', 'linkedin']"
-          size="2x"
-        />
-      </a>
-      <a href="https://line.me/ti/p/evLAiZ5ykv" target="_blank">
+      <a href="https://lin.ee/tFwfapW" target="_blank">
         <font-awesome-icon
           class="icon-social"
           :icon="['fab', 'line']"
@@ -59,12 +31,12 @@
       <h4 class="toppic-our-products">แผนการเงินที่เราให้บริการ</h4>
       <Devide style-type="gold-divide" />
       <ul>
-        <li><a href=""> การวางแผนเกษียณอายุ </a></li>
-        <li><a href=""> การวางแผนภาษี </a></li>
-        <li><a href=""> การวางแผนประกันภัย </a></li>
-        <li><a href=""> การวางแผนการศึกษาบุตร </a></li>
-        <li><a href=""> การวางแผนการลงทุน </a></li>
-        <li><a href=""> การวางแผนการส่งต่อมรดก </a></li>
+        <li>การวางแผนเกษียณอายุ</li>
+        <li>การวางแผนภาษี</li>
+        <li>การวางแผนประกันภัย</li>
+        <li>การวางแผนการศึกษาบุตร</li>
+        <li>การวางแผนการลงทุน</li>
+        <li>การวางแผนการส่งต่อมรดก</li>
       </ul>
     </div>
   </section>
