@@ -1,8 +1,8 @@
 <template>
   <div class="hamburger-container">
-    <font-awesome-icon
-      :icon="['fa', 'bars']"
-      size="2x"
+    <img
+      src="~/assets/icons/hamburger.svg"
+      alt="hamburger menu"
       class="hamburger-icon"
       @click="showMenu"
     />
@@ -61,6 +61,7 @@ export default {
   z-index: 1;
   text-align: left;
   .hamburger-icon {
+    height: 70px;
     padding-top: 36px;
     padding-right: 20px;
     color: $gold;

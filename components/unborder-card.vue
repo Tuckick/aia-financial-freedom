@@ -39,10 +39,10 @@ export default {
   text-align: center;
   text-align: -webkit-center;
   .icon-section {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    padding: 20px;
+    padding-top: 14px;
 
     .icon {
       color: $white;
