@@ -1,52 +1,48 @@
 <template>
-  <slider class="carousel-container" animation="fade" style="height: 500px;">
-    <slider-item
-      v-for="(i, index) in carouselList"
-      :key="index"
-      class="slide-item"
+  <div>
+    <b-carousel
+      id="carousel-1"
+      v-model="slide"
+      :interval="4000"
+      controls
+      indicators
+      background="#ababab"
+      img-width="inherit"
+      style="text-shadow: 1px 1px 2px #333"
+      @sliding-start="onSlideStart"
+      @sliding-end="onSlideEnd"
     >
-      <img
-        :src="require(`../../../assets/image/carousel/${i.img}`)"
-        alt="carousel img"
-        class="img-slide-item"
-      />
-    </slider-item>
-  </slider>
+      <b-carousel-slide
+        img-src="@/assets/image/carousel/poster-01.jpg"
+      ></b-carousel-slide>
+      <b-carousel-slide
+        img-src="@/assets/image/carousel/poster-02.jpg"
+      ></b-carousel-slide>
+      <b-carousel-slide
+        img-src="@/assets/image/carousel/poster-03.jpg"
+      ></b-carousel-slide>
+      <b-carousel-slide
+        img-src="@/assets/image/carousel/poster-04.jpg"
+      ></b-carousel-slide>
+    </b-carousel>
+  </div>
 </template>
+
 <script>
-import { Slider, SliderItem } from 'vue-easy-slider'
-
 export default {
-  name: 'Carousel',
-
-  components: {
-    Slider,
-    SliderItem,
-  },
   data() {
     return {
-      carouselList: [
-        { img: 'poster-01.jpg' },
-        { img: 'poster-02.jpg' },
-        { img: 'poster-03.jpg' },
-        { img: 'poster-04.jpg' },
-      ],
+      slide: 0,
+      sliding: null,
     }
+  },
+  methods: {
+    onSlideStart(slide) {
+      this.sliding = true
+    },
+    onSlideEnd(slide) {
+      this.sliding = false
+    },
   },
 }
 </script>
-
-<style lang="scss" scoped>
-.carousel-container {
-  z-index: 0;
-
-  .slide-item {
-    width: 100%;
-    height: 100%;
-    .img-slide-item {
-      width: inherit;
-      height: inherit;
-    }
-  }
-}
-</style>

@@ -72,6 +72,7 @@ export default {
         },
       },
     ],
+    ['bootstrap-vue/nuxt'],
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
