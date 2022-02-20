@@ -8,11 +8,11 @@
       <span><b>ตำแหน่ง :</b> {{ i.position }}</span>
       <div class="detail-container">
         <p><b>รายละเอียดงาน</b></p>
-        <ul v-for="(detail, index) in i.detail" :key="index">
+        <ul v-for="(detail, indexDetail) in i.detail" :key="indexDetail">
           <li>{{ detail }}</li>
         </ul>
         <p><b>คุณสมบัติ</b></p>
-        <ul v-for="(feature, index) in i.feature" :key="index">
+        <ul v-for="(feature, indexFeature) in i.feature" :key="indexFeature">
           <li>{{ feature }}</li>
         </ul>
       </div>

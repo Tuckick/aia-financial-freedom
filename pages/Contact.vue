@@ -28,7 +28,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~assets/scss/variables';
+
 .position-career-container {
   max-width: 540px;
+
+  @media (min-width: $desktop-start) {
+    max-width: $desktop;
+  }
 }
 </style>

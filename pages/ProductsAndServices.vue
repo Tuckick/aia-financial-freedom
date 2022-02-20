@@ -254,5 +254,9 @@ export default {
       }
     }
   }
+
+  @media (min-width: $desktop-start) {
+    max-width: $desktop;
+  }
 }
 </style>

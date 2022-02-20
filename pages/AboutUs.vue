@@ -88,6 +88,10 @@ export default {
       text-align: left;
     }
   }
+
+  @media (min-width: $desktop-start) {
+    max-width: $desktop;
+  }
 }
 
 strong {
