@@ -54,7 +54,7 @@ export default {
 @import '~assets/scss/variables';
 
 #home-carousel {
-  width: 100vw;
+  width: 100%;
 }
 .may-i-help-container {
   background-color: $dark-gray;
@@ -91,17 +91,10 @@ export default {
 
   @media (min-width: $desktop-start) and (max-width: $desktop) {
     max-width: 90%;
-
-    h1 {
-      font-size: $extra;
-    }
   }
 
   @media (min-width: $desktop-over) {
     max-width: $desktop;
-    h1 {
-      font-size: $extra;
-    }
   }
 }
 </style>
