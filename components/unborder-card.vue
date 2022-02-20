@@ -1,6 +1,6 @@
 <template>
   <div class="unborder-card-container">
-    <div v-for="(i, index) in items" :key="index">
+    <div v-for="(i, index) in items" :key="index" class="item-unborder-card">
       <section class="icon-section" :class="backgroundColor">
         <font-awesome-icon :icon="['fa', i.icon]" size="3x" class="icon" />
       </section>
@@ -80,6 +80,17 @@ export default {
 
   .light-gray {
     background-color: $light-gray;
+  }
+
+  @media (min-width: $desktop-start) {
+    // .unborder-card-container {
+    display: flex;
+    justify-content: space-between;
+
+    .item-unborder-card {
+      max-width: 300px;
+    }
+    // }
   }
 }
 </style>
