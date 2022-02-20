@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="grid-card">
     <div v-for="(item, index) in items" :key="index" class="card-container">
       <img
         :src="require(`~/assets/image/productsNservices/${item.name}.jpg`)"
@@ -48,31 +48,56 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '~assets/scss/variables';
+.grid-card {
+  .card-container {
+    max-width: 300px;
+    border: 2px solid $dark-gray;
+    border-radius: 16px;
+    box-shadow: 8px 8px 20px grey;
+    padding: 16px;
+    text-align: left;
+    margin-top: 16px;
+    .image-card {
+      width: 100%;
+      height: 190px;
+    }
+    .card-detail {
+      h3 {
+        font-size: $regular;
+        margin: 16px auto 0;
+      }
+      p {
+        font-size: $small;
+        color: $gray-desc;
+      }
+    }
+  }
+  .card-container:last-child {
+    margin-bottom: 48px;
+  }
 
-.card-container {
-  max-width: 300px;
-  border: 2px solid $dark-gray;
-  border-radius: 16px;
-  box-shadow: 8px 8px 20px grey;
-  padding: 16px;
-  text-align: left;
-  margin-top: 16px;
-  .image-card {
-    width: 100%;
-    height: 190px;
-  }
-  .card-detail {
-    h3 {
-      font-size: $regular;
-      margin: 16px auto 0;
-    }
-    p {
-      font-size: $small;
-      color: $gray-desc;
+  @media (min-width: $desktop-start) and (max-width: $desktop) {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 300px 300px;
+    place-content: center;
+    margin-bottom: 48px;
+
+    .card-container:last-child {
+      margin-bottom: 0px;
     }
   }
-}
-.card-container:last-child {
-  margin-bottom: 48px;
+
+  @media (min-width: $desktop-over) {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 300px 300px 300px;
+    place-content: center;
+    margin-bottom: 48px;
+
+    .card-container:last-child {
+      margin-bottom: 0px;
+    }
+  }
 }
 </style>
