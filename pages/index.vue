@@ -89,9 +89,16 @@ export default {
     }
   }
 
-  @media (min-width: $desktop-start) {
-    max-width: $desktop;
+  @media (min-width: $desktop-start) and (max-width: $desktop) {
+    max-width: 90%;
 
+    h1 {
+      font-size: $extra;
+    }
+  }
+
+  @media (min-width: $desktop-over) {
+    max-width: $desktop;
     h1 {
       font-size: $extra;
     }

@@ -33,7 +33,11 @@ export default {
 .position-career-container {
   max-width: 540px;
 
-  @media (min-width: $desktop-start) {
+  @media (min-width: $desktop-start) and (max-width: $desktop) {
+    max-width: 90%;
+  }
+
+  @media (min-width: $desktop-over) {
     max-width: $desktop;
   }
 }
