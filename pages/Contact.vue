@@ -29,7 +29,10 @@ export default {
 
 <style lang="scss" scoped>
 @import '~assets/scss/variables';
-
+h3 {
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
 .position-career-container {
   max-width: 540px;
 
