@@ -1,0 +1,30 @@
+//#region remove iOS fk function
+%disable-double-tap-zoom {
+    touch-action: none;
+}
+
+%remove-ios-input-style {
+    /* remove ios input style */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+//#endregion remove iOS fk function
+
+//#region animation
+@mixin transition($speed) {
+    -webkit-transition: all $speed ease-out;
+    -moz-transition: all $speed ease-out;
+    -o-transition: all $speed ease-out;
+    transition: all $speed ease-out;
+}
+//#endregion animation
+
+//remove focus style (default blue border when click)
+%unselectable {
+    -webkit-user-select: none; /* Chrome all / Safari all */
+       -moz-user-select: none; /* Firefox all */
+        -ms-user-select: none; /* IE 10+ */
+            user-select: none;
+}
+

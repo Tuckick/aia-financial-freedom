@@ -1,0 +1,107 @@
+$zindex-dropdown: 1000;
+$zindex-sticky: 1020;
+$zindex-fixed: 1030;
+$zindex-modal-backdrop: 1040;
+$zindex-modal: 1050;
+$zindex-popover: 1060;
+$zindex-tooltip: 1070;
+
+$topbar-height: 55px;
+$footer-height: 30px;
+$left-menu-width: 240px;
+
+$max-width-mini-mobile: 320px;
+$max-width-mobile: 575px;
+$min-width-tablet: 576px;
+$max-width-tablet: 1200px;
+$min-width-desktop: 1201px;
+
+@mixin mini-mobile {
+    @media (max-width: $max-width-mini-mobile) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $max-width-mobile) {
+        @content;
+    }
+}
+
+@mixin min-tablet {
+    @media (min-width: $min-width-tablet) {
+        @content;
+    }
+}
+
+@mixin max-tablet {
+    @media (min-width: $max-width-tablet) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $min-width-tablet) and (max-width: $max-width-tablet) {
+        @content;
+    }
+}
+
+@mixin min-desktop {
+    @media (min-width: $min-width-desktop) {
+        @content;
+    }
+}
+
+// #region colors
+$colors: (
+    'orange-1': '#fba400',
+    'orange-2': '#f6e1c2',
+    'blue-1': '#125eaf',
+    'blue-2': '#21a0fb',
+    'blue-3': '#3384f9',
+);
+// #endregion colors
+
+$color-primary: #f79443;
+$color-primary-2: #fab23a;
+$color-primary-3: #f9b47b;
+
+$color-white: #ffffff;
+$color-white-f5e: #fff5e5;
+$color-white-50: rgba(#fff, 0.5);
+
+$color-black: #000;
+$color-black-1: #00000014;
+$color-primary: #125eaf;
+$color-primary-light: #21a0fb;
+$color-primary-light-2: #3384f9;
+$color-green:#00b900;
+$color-orange:#ff9f00;
+$color-purple: #950aef;
+$color-blue: #1d5ffb;
+
+$color-body: #666c8b;
+$color-eee: #eeeeee;
+$color-grey-99: #999;
+$color-grey-b4: #b4b4b4;
+$color-grey-line: #ecedf3;
+$color-grey-7d: #7d7d7d;
+$color-grey-b3: #b3b3b3;
+$color-grey-58: #585858;
+$color-grey-a6: #aaaaaa;
+$color-grey-f7: #f7f7f7;
+$color-grey-b8: #b8b8b8;
+$color-grey-f8: #f8f8f8;
+$color-grey-ab: #abadbd;
+$color-grey-ccc: #ccc;
+$color-grey-de: #dedede;
+$color-grey-e3: #e3e3e3;
+$color-tab: #fafafa;
+
+$rejected: #de1717;
+
+
+
+$color-border: #e5e5e5;
+$color-bg-app: #e6e8f3;
+$color-head-table: #a6a6b6;

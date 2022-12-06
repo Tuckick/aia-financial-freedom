@@ -1,0 +1,94 @@
+%display-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+%display-flex-nowrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+%fit-content {
+    width: fit-content;
+    width: intrinsic;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    height: fit-content;
+    height: intrinsic;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+}
+
+%fit-x-content {
+    width: fit-content;
+    width: intrinsic;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+}
+
+%fit-y-content {
+    height: fit-content;
+    height: intrinsic;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+}
+
+@mixin translateKit($x: 0, $y: 0) {
+    -moz-transform: translate($x, $y);
+    -webkit-transform: translate($x, $y);
+    -o-transform: translate($x, $y);
+    -ms-transform: translate($x, $y);
+    transform: translate($x, $y);
+}
+
+//#region scroll bar
+%hide-scrollbar {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@mixin scrollbar($scroll-color: #888, $bg-color: slategrey) {
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $scroll-color;
+        // outline: 1px solid ;
+        border-radius: 5px;
+    }
+}
+//#endregion scroll bar
+
+//#region side scroll
+%wrap-scroll {
+    position: relative;
+
+    .side-scroll{
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        &::-webkit-scrollbar {
+            width: 0px;
+            display: none;
+        }
+
+        div {
+            flex-shrink: 0;
+        }
+    }
+}
+//#endregion side scroll

@@ -18,12 +18,12 @@
       <b-carousel-slide
         img-src="@/assets/image/carousel/poster-02.jpg"
       ></b-carousel-slide>
-      <b-carousel-slide
+      <!-- <b-carousel-slide
         img-src="@/assets/image/carousel/poster-03.jpg"
       ></b-carousel-slide>
       <b-carousel-slide
         img-src="@/assets/image/carousel/poster-04.jpg"
-      ></b-carousel-slide>
+      ></b-carousel-slide> -->
     </b-carousel>
   </div>
 </template>

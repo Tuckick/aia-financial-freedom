@@ -67,7 +67,7 @@ export default {
     color: $gold;
   }
   .tab-section {
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 0px;
 

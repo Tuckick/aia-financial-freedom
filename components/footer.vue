@@ -3,10 +3,8 @@
     <div class="contact-address">
       <h4 class="toppic-contact-address">ที่อยู่ ติดต่อ</h4>
       <p class="contact-address-desc">
-        1234 ตึก AIA แขวงXXX เขตXXX กรุงเทพมหานคร 100000
+        เลขที่ 138 ชั้น 23 ซอยนเรศ แขวงสี่พระยา เขตบางรัก กรุงเทพฯ ปณ.10500
       </p>
-      <a href="">www.google.com</a><br />
-      <a href="tel:055248607">Tel.02-XXXXXXX</a>
     </div>
     <div class="follow-social">
       <h4 class="toppic-follow-social">Follow</h4>
@@ -93,6 +91,11 @@ export default {
       font-size: $regular;
       margin: 32px auto 8px;
       font-weight: 1000;
+    }
+    ul {
+      li {
+        margin-bottom: 4px;
+      }
     }
   }
   a {
