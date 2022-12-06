@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'aia-financial-freedom',
+    title: 'AIA Financial Freedom',
     htmlAttrs: {
       lang: 'en',
     },
