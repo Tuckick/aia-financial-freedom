@@ -5,6 +5,7 @@
       <p class="contact-address-desc">
         เลขที่ 138 ชั้น 23 ซอยนเรศ แขวงสี่พระยา เขตบางรัก กรุงเทพฯ ปณ.10500
       </p>
+      <p>email: <a href="mailto:financial.anthony@gmail.com">financial.anthony@gmail.com</a></p>
     </div>
     <div class="follow-social">
       <h4 class="toppic-follow-social">Follow</h4>

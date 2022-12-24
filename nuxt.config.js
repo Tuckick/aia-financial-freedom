@@ -13,6 +13,21 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
+      {
+        hid: 'og-title',
+        property: 'og:title',
+        content: 'AIA Financial Freedom',
+      },
+      {
+        hid: 'og-desc',
+        property: 'og:description',
+        content: 'Come to join us for better together.',
+      },
+      {
+        hid: 'og-image',
+        property: 'og:image',
+        content: '/financial-freedom-logo.png',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
   },
